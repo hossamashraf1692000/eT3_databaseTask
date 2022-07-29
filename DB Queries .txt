@@ -1,0 +1,12 @@
+# I have used mysql database to implement database task and get out the results by these queries 
+  after imported the provided excel sheet into my localhost relational database.
+
+
+1. Which drink has the highest calories from the dataset ?
+=> SELECT * FROM `drinkmenu` ORDER BY `Calories` DESC LIMIT 1
+
+2. What is the average calorie amount for each drink category ?
+=> SELECT DISTINCT `Beverage_category` AS Drink_Category, AVG(`Calories`)  FROM `drinkmenu` GROUP BY Drink_Category, 
+
+3. Which drinks have below average calorie amount ?
+=> SELECT DISTINCT `Beverage` AS Drink_Name, AVG(`Calories`) AS Calories_avg  FROM `drinkmenu` GROUP BY Drink_Name ORDER BY Calories_avg LIMIT 1; 
